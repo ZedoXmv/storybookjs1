@@ -23,6 +23,7 @@ Default.args = {
     { ...TaskStories.Default.args.task, id: '5', title: 'Task 5' },
     { ...TaskStories.Default.args.task, id: '6', title: 'Task 6' },
   ],
+  loading: false,
 }
 
 export const PinnedAndArchived = Template.bind({})
@@ -32,6 +33,7 @@ PinnedAndArchived.args = {
         { id: '5', title: 'Task 5 (archived)', state:'TASK_ARCHIVED'},
         { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
       ],
+      loading: false,
 }
 
 export const Loading = Template.bind({})

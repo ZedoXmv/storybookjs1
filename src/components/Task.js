@@ -2,7 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-export default function Task({ task: { id, title, state}, onArchiveTask, onPinTask, onUnpinTask}){
+export default function Task({ task: { id, title, state}, onArchiveTask, onPinTask, onUnpinTask,PinTask,ArchiveTask}){
+    if(PinTask) {
+        state = 'TASK_PINNED'
+    }
+    if(ArchiveTask) {
+        state = 'TASK_ARCHIVED'
+    }
     return (
         <div className={`list-item ${state}`}>
             <label className='checkbox'>

@@ -9,7 +9,7 @@ import * as TaskListStories from './TaskList.stories'
 const store = {
     getState: () => {
         return{
-            tasks: TaskListStories.Default.args.tasks,
+            tasks: TaskListStories.PinnedAndArchived.args.tasks,
         };
     },
     subscribe: () => 0,
@@ -24,7 +24,7 @@ export default {
 
 const Template = args => <PureInboxScreen {...args} />
 
-export const Default = Template.bind({});
+export const PinnedAndArchived = Template.bind({});
 
 export const Error = Template.bind({});
 Error.args = {

@@ -49,6 +49,8 @@ const defaultTasks = [
     { id: '2', title: 'Something more', state: 'TASK_INBOX' },
     { id: '3', title: 'Something else', state: 'TASK_INBOX' },
     { id: '4', title: 'Something again', state: 'TASK_INBOX' },
+    { id: '5', title: 'This task is pinned', state: 'TASK_PINNED' },
+    { id: '6', title: 'This task is archived', state: 'TASK_ARCHIVED' },
 ]
 
 // We export the constructed redux store

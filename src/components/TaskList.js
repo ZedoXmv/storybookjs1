@@ -5,14 +5,15 @@ import PropTypes from 'prop-types';
 
 import Task from './Task';
 import { connect } from 'react-redux';
-import { archiveTask, pinTask } from '../lib/redux';
+import { archiveTask, pinTask, unPinTask } from '../lib/redux';
 
 
 
-export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask}) {
+export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask, onUnpinTask}) {
     const events = {
         onPinTask,
         onArchiveTask,
+        onUnpinTask,
     };
 
     const LoadingRow = (
@@ -51,8 +52,9 @@ export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask}) {
 
     const tasksInOrder = [
         ...tasks.filter(t => t.state === 'TASK_PINNED'),
-        ...tasks.filter(t => t.state !== 'TASK_PINNED'),
-
+        ...tasks.filter(t => t.state === 'TASK_INBOX'),
+        ...tasks.filter(t => t.state === 'TASK_ARCHIVED'),
+        // ...tasks.filter(t => t.state !== 'TASK_PINNED'),
     ];
 
     return (
@@ -71,6 +73,8 @@ PureTaskList.propTypes = {
     onPinTask: PropTypes.func.isRequired,
     /** Event to change the task to archived */
     onArchiveTask: PropTypes.func.isRequired,
+
+    onUnpinTask: PropTypes.func.isRequired,
   };
   
   PureTaskList.defaultProps = {
@@ -79,10 +83,11 @@ PureTaskList.propTypes = {
   
   export default connect(
     ({ tasks }) => ({
-      tasks: tasks.filter(t => t.state === 'TASK_INBOX' || t.state === 'TASK_PINNED'),
+      tasks: tasks.filter(t => t.state === 'TASK_INBOX' || t.state === 'TASK_PINNED' || t.state === 'TASK_ARCHIVED'),
     }),
     dispatch => ({
       onArchiveTask: id => dispatch(archiveTask(id)),
       onPinTask: id => dispatch(pinTask(id)),
+      onUnpinTask: id => dispatch(unPinTask(id)),
     })
   )(PureTaskList);

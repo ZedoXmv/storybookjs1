@@ -1,137 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Task Archived 1`] = `
+exports[`Storyshots InboxScreen Error 1`] = `
 <div
-  className="list-item TASK_ARCHIVED"
+  className="page lists-show"
 >
-  <label
-    className="checkbox"
+  <div
+    className="wrapper-message"
   >
-    <input
-      defaultChecked={true}
-      disabled={true}
-      name="checked"
-      type="checkbox"
-    />
     <span
-      className="checkbox-custom"
-      onClick={[Function]}
+      className=" icon-face-sad"
     />
-  </label>
-  <div
-    className="title"
-  >
-    <input
-      placeholder="Input title"
-      readOnly={true}
-      type="text"
-      value="Test Task"
-    />
+    <div
+      className="title-message"
+    >
+      Oh no!
+    </div>
+    <div
+      className="subtitle-message"
+    >
+      Something went wrong
+    </div>
   </div>
-  <div
-    className="actions"
-    onClick={[Function]}
-  />
 </div>
 `;
 
-exports[`Storyshots Task Default 1`] = `
+exports[`Storyshots InboxScreen Pinned And Archived 1`] = `
 <div
-  className="list-item TASK_INBOX"
+  className="page lists-show"
 >
-  <label
-    className="checkbox"
-  >
-    <input
-      defaultChecked={false}
-      disabled={true}
-      name="checked"
-      type="checkbox"
-    />
-    <span
-      className="checkbox-custom"
-      onClick={[Function]}
-    />
-  </label>
-  <div
-    className="title"
-  >
-    <input
-      placeholder="Input title"
-      readOnly={true}
-      type="text"
-      value="Test Task"
-    />
-  </div>
-  <div
-    className="actions"
-    onClick={[Function]}
-  >
-    <a
-      onClick={[Function]}
+  <nav>
+    <h1
+      className="title-page"
     >
       <span
-        className="icon-star"
-      />
-    </a>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Task Pinned 1`] = `
-<div
-  className="list-item TASK_PINNED"
->
-  <label
-    className="checkbox"
-  >
-    <input
-      defaultChecked={false}
-      disabled={true}
-      name="checked"
-      type="checkbox"
-    />
-    <span
-      className="checkbox-custom"
-      onClick={[Function]}
-    />
-  </label>
-  <div
-    className="title"
-  >
-    <input
-      placeholder="Input title"
-      readOnly={true}
-      type="text"
-      value="Test Task"
-    />
-  </div>
-  <div
-    className="actions"
-    onClick={[Function]}
-  >
-    <a
-      onClick={[Function]}
-    >
-      <span
-        className="icon-star"
-      />
-    </a>
-  </div>
-</div>
-`;
-
-exports[`Storyshots TaskList Default 1`] = `
-<div
-  style={
-    Object {
-      "padding": "3rem",
-    }
-  }
->
+        className="title-wrapper"
+      >
+        Taskbox
+      </span>
+    </h1>
+  </nav>
   <div
     className="list-items"
   >
+    <div
+      className="list-item TASK_PINNED"
+    >
+      <label
+        className="checkbox"
+      >
+        <input
+          defaultChecked={false}
+          disabled={true}
+          name="checked"
+          type="checkbox"
+        />
+        <span
+          className="checkbox-custom"
+          onClick={[Function]}
+        />
+      </label>
+      <div
+        className="title"
+      >
+        <input
+          placeholder="Input title"
+          readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
+          type="text"
+          value="Task 6 (pinned)"
+        />
+      </div>
+      <div
+        className="actions"
+        onClick={[Function]}
+      >
+        <a
+          onClick={[Function]}
+        >
+          <span
+            className="icon-star"
+          />
+        </a>
+      </div>
+    </div>
     <div
       className="list-item TASK_INBOX"
     >
@@ -155,6 +110,11 @@ exports[`Storyshots TaskList Default 1`] = `
         <input
           placeholder="Input title"
           readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
           type="text"
           value="Task 1"
         />
@@ -195,6 +155,11 @@ exports[`Storyshots TaskList Default 1`] = `
         <input
           placeholder="Input title"
           readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
           type="text"
           value="Task 2"
         />
@@ -235,6 +200,11 @@ exports[`Storyshots TaskList Default 1`] = `
         <input
           placeholder="Input title"
           readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
           type="text"
           value="Task 3"
         />
@@ -275,6 +245,403 @@ exports[`Storyshots TaskList Default 1`] = `
         <input
           placeholder="Input title"
           readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
+          type="text"
+          value="Task 4"
+        />
+      </div>
+      <div
+        className="actions"
+        onClick={[Function]}
+      >
+        <a
+          onClick={[Function]}
+        >
+          <span
+            className="icon-star"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      className="list-item TASK_ARCHIVED"
+    >
+      <label
+        className="checkbox"
+      >
+        <input
+          defaultChecked={true}
+          disabled={true}
+          name="checked"
+          type="checkbox"
+        />
+        <span
+          className="checkbox-custom"
+          onClick={[Function]}
+        />
+      </label>
+      <div
+        className="title"
+      >
+        <input
+          placeholder="Input title"
+          readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
+          type="text"
+          value="Task 5 (archived)"
+        />
+      </div>
+      <div
+        className="actions"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Task Archived 1`] = `
+<div
+  className="list-item TASK_ARCHIVED"
+>
+  <label
+    className="checkbox"
+  >
+    <input
+      defaultChecked={true}
+      disabled={true}
+      name="checked"
+      type="checkbox"
+    />
+    <span
+      className="checkbox-custom"
+      onClick={[Function]}
+    />
+  </label>
+  <div
+    className="title"
+  >
+    <input
+      placeholder="Input title"
+      readOnly={true}
+      style={
+        Object {
+          "textOverflow": "ellipsis",
+        }
+      }
+      type="text"
+      value="Test Task"
+    />
+  </div>
+  <div
+    className="actions"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`Storyshots Task Default 1`] = `
+<div
+  className="list-item TASK_INBOX"
+>
+  <label
+    className="checkbox"
+  >
+    <input
+      defaultChecked={false}
+      disabled={true}
+      name="checked"
+      type="checkbox"
+    />
+    <span
+      className="checkbox-custom"
+      onClick={[Function]}
+    />
+  </label>
+  <div
+    className="title"
+  >
+    <input
+      placeholder="Input title"
+      readOnly={true}
+      style={
+        Object {
+          "textOverflow": "ellipsis",
+        }
+      }
+      type="text"
+      value="Test Task"
+    />
+  </div>
+  <div
+    className="actions"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`Storyshots Task Long Title 1`] = `
+<div
+  className="list-item TASK_INBOX"
+>
+  <label
+    className="checkbox"
+  >
+    <input
+      defaultChecked={false}
+      disabled={true}
+      name="checked"
+      type="checkbox"
+    />
+    <span
+      className="checkbox-custom"
+      onClick={[Function]}
+    />
+  </label>
+  <div
+    className="title"
+  >
+    <input
+      placeholder="Input title"
+      readOnly={true}
+      style={
+        Object {
+          "textOverflow": "ellipsis",
+        }
+      }
+      type="text"
+      value="This task's name is absurdly large. In fact, I think if I keep going I might end up with content overflow. What will happen? The star that represents a pinned task could have text overlapping. The text could cut-off abruptly when it reaches the star. I hope not!"
+    />
+  </div>
+  <div
+    className="actions"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`Storyshots Task Pinned 1`] = `
+<div
+  className="list-item TASK_PINNED"
+>
+  <label
+    className="checkbox"
+  >
+    <input
+      defaultChecked={false}
+      disabled={true}
+      name="checked"
+      type="checkbox"
+    />
+    <span
+      className="checkbox-custom"
+      onClick={[Function]}
+    />
+  </label>
+  <div
+    className="title"
+  >
+    <input
+      placeholder="Input title"
+      readOnly={true}
+      style={
+        Object {
+          "textOverflow": "ellipsis",
+        }
+      }
+      type="text"
+      value="Test Task"
+    />
+  </div>
+  <div
+    className="actions"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`Storyshots TaskList Default 1`] = `
+<div
+  style={
+    Object {
+      "padding": "3rem",
+    }
+  }
+>
+  <div
+    className="list-items"
+  >
+    <div
+      className="list-item TASK_INBOX"
+    >
+      <label
+        className="checkbox"
+      >
+        <input
+          defaultChecked={false}
+          disabled={true}
+          name="checked"
+          type="checkbox"
+        />
+        <span
+          className="checkbox-custom"
+          onClick={[Function]}
+        />
+      </label>
+      <div
+        className="title"
+      >
+        <input
+          placeholder="Input title"
+          readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
+          type="text"
+          value="Task 1"
+        />
+      </div>
+      <div
+        className="actions"
+        onClick={[Function]}
+      >
+        <a
+          onClick={[Function]}
+        >
+          <span
+            className="icon-star"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      className="list-item TASK_INBOX"
+    >
+      <label
+        className="checkbox"
+      >
+        <input
+          defaultChecked={false}
+          disabled={true}
+          name="checked"
+          type="checkbox"
+        />
+        <span
+          className="checkbox-custom"
+          onClick={[Function]}
+        />
+      </label>
+      <div
+        className="title"
+      >
+        <input
+          placeholder="Input title"
+          readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
+          type="text"
+          value="Task 2"
+        />
+      </div>
+      <div
+        className="actions"
+        onClick={[Function]}
+      >
+        <a
+          onClick={[Function]}
+        >
+          <span
+            className="icon-star"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      className="list-item TASK_INBOX"
+    >
+      <label
+        className="checkbox"
+      >
+        <input
+          defaultChecked={false}
+          disabled={true}
+          name="checked"
+          type="checkbox"
+        />
+        <span
+          className="checkbox-custom"
+          onClick={[Function]}
+        />
+      </label>
+      <div
+        className="title"
+      >
+        <input
+          placeholder="Input title"
+          readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
+          type="text"
+          value="Task 3"
+        />
+      </div>
+      <div
+        className="actions"
+        onClick={[Function]}
+      >
+        <a
+          onClick={[Function]}
+        >
+          <span
+            className="icon-star"
+          />
+        </a>
+      </div>
+    </div>
+    <div
+      className="list-item TASK_INBOX"
+    >
+      <label
+        className="checkbox"
+      >
+        <input
+          defaultChecked={false}
+          disabled={true}
+          name="checked"
+          type="checkbox"
+        />
+        <span
+          className="checkbox-custom"
+          onClick={[Function]}
+        />
+      </label>
+      <div
+        className="title"
+      >
+        <input
+          placeholder="Input title"
+          readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
           type="text"
           value="Task 4"
         />
@@ -315,6 +682,11 @@ exports[`Storyshots TaskList Default 1`] = `
         <input
           placeholder="Input title"
           readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
           type="text"
           value="Task 5"
         />
@@ -355,6 +727,11 @@ exports[`Storyshots TaskList Default 1`] = `
         <input
           placeholder="Input title"
           readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
           type="text"
           value="Task 6"
         />
@@ -589,6 +966,11 @@ exports[`Storyshots TaskList Pinned And Archived 1`] = `
         <input
           placeholder="Input title"
           readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
           type="text"
           value="Task 6 (pinned)"
         />
@@ -629,6 +1011,11 @@ exports[`Storyshots TaskList Pinned And Archived 1`] = `
         <input
           placeholder="Input title"
           readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
           type="text"
           value="Task 1"
         />
@@ -669,6 +1056,11 @@ exports[`Storyshots TaskList Pinned And Archived 1`] = `
         <input
           placeholder="Input title"
           readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
           type="text"
           value="Task 2"
         />
@@ -709,6 +1101,11 @@ exports[`Storyshots TaskList Pinned And Archived 1`] = `
         <input
           placeholder="Input title"
           readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
           type="text"
           value="Task 3"
         />
@@ -749,6 +1146,11 @@ exports[`Storyshots TaskList Pinned And Archived 1`] = `
         <input
           placeholder="Input title"
           readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
           type="text"
           value="Task 4"
         />
@@ -789,6 +1191,11 @@ exports[`Storyshots TaskList Pinned And Archived 1`] = `
         <input
           placeholder="Input title"
           readOnly={true}
+          style={
+            Object {
+              "textOverflow": "ellipsis",
+            }
+          }
           type="text"
           value="Task 5 (archived)"
         />

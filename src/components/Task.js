@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-export default function Task({ task: { id, title, state}, onArchiveTask, onPinTask, onUnpinTask}){
+export default function Task({ task: { id,title, state}, onArchiveTask, onPinTask, onUnpinTask, canPin}){
     return (
         <div className={`list-item ${state}`}>
             <label className='checkbox'>
@@ -30,14 +30,14 @@ export default function Task({ task: { id, title, state}, onArchiveTask, onPinTa
                 <input type='text' value={title} readOnly={true} placeholder="Input title" style={{ textOverflow: 'ellipsis' }} />
             </div>
             <div className='actions' onClick={event => event.stopPropagation()}>
-                {state !== 'TASK_PINNED' && state !== 'TASK_ARCHIVED' && 
+                {state !== 'TASK_PINNED' && state !== 'TASK_ARCHIVED' && canPin === true &&
                 (
                     // eslint-disable-next-line jsx-a11y/anchor-is-valid
                     <a onClick={() => onPinTask(id)}>
                         <span className={`icon-star`}/>
                     </a>
                 )}
-                {state === 'TASK_PINNED' && state !== 'TASK_ARCHIVED' && 
+                {state === 'TASK_PINNED' && state !== 'TASK_ARCHIVED' && canPin === true &&
                 (
                     // eslint-disable-next-line jsx-a11y/anchor-is-valid
                     <a onClick={() => onUnpinTask(id)}>

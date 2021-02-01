@@ -9,7 +9,7 @@ import { archiveTask, pinTask, unPinTask } from '../lib/redux';
 
 
 
-export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask, onUnpinTask}) {
+export function PureTaskList({ loading,canPin , tasks, onPinTask, onArchiveTask, onUnpinTask}) {
     const events = {
         onPinTask,
         onArchiveTask,
@@ -59,7 +59,7 @@ export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask, onUnpin
 
     return (
         <div className='list-items'>
-            {tasksInOrder.map(task => (<Task key={task.id} task={task} {...events}/> ))}
+            {tasksInOrder.map(task => (<Task key={task.id} canPin={canPin} task={task} {...events}/> ))}
         </div>
     );
 }
@@ -67,6 +67,7 @@ export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask, onUnpin
 PureTaskList.propTypes = {
     /** Checks if it's in loading state */
     loading: PropTypes.bool,
+    canPin: PropTypes.bool,
     /** The list of tasks */
     tasks: PropTypes.arrayOf(Task.propTypes.task).isRequired,
     /** Event to change the task to pinned */
@@ -79,6 +80,7 @@ PureTaskList.propTypes = {
   
   PureTaskList.defaultProps = {
     loading: false,
+    canPin: true,
   };
   
   export default connect(

@@ -23,9 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 /storybook-static
-<<<<<<< HEAD
-
-
-=======
->>>>>>> b2b1fd0930a4674bd8992a277033c174cb733d13
 .eslintcache

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-export default function Task({ task: { id, title, state}, onArchiveTask, onPinTask, onUnpinTask,PinTask,ArchiveTask}){
+export default function Task({ task: { id, title, state}, onArchiveTask, onPinTask, onUnpinTask,PinTask,ArchiveTask, canPin}){
     if(PinTask) {
         state = 'TASK_PINNED'
     }
